@@ -3,6 +3,7 @@
 
 # ignore ALL files in ANY directory named temp
 temp/
+biblia-css/
 
 # ignore ALL
 *.zip
