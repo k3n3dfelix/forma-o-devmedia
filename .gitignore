@@ -4,6 +4,8 @@
 # ignore ALL files in ANY directory named temp
 temp/
 biblia-css/
+biblia-html/
 
 # ignore ALL
 *.zip
+*.rar
