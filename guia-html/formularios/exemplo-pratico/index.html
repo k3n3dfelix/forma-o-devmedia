@@ -9,53 +9,84 @@
     </title>
 </head>
 <body>
-    <form method="GET" action="#">
-        <div>
-            <label>Email: </label>
-            <input type="email"/>
-        </div>
-        <div>
-            <label>Senha: </label>
-            <input type="password"/>
-         </div>
-         
-         <div>
-             <label>Nome: </label>
-             <input type="text" placeholder="Ex: Kened"/>
-         </div>
-         <div>
-             <label>Telefone: </label>
-             <input type="text" placeholder="Ex: (99) 99999-9999"/>
-         </div>
-         <div>
-             <label>Sexo:</label>
-             <input type="radio" value="Masculino" name="sexo" checked/>
-             <label>Masculino</label>
-             <input type="radio" value="Feminino" name="sexo" />
-             <label>Feminino</label>
-             
-         </div>
-         <div>
-             <label>Data:</label>
-             <input type="date" / >
-         </div>
-         <div>
-             <label>Rua:</label>
-             <input type="text"/>
-         </div>
-         <div>
-            <label>Complemento:</label>
-            <input type="text"/>
-        </div>
-        <div>
-            <label>Número: </label>
-            <input type="number" min="1" max="9999">
-        </div>
-        <div>
-            <label>Cidade:</label>
-            <input type="text"/>
-        </div>
-        <button type="submit">Enviar</button>
+    <form method="GET" action="http://arquivo.devmedia.com.br/projeto/requisicao.php">
+        <fieldset>
+            <legend>Conta:</legend>
+            <div>
+                <label>Email: </label>
+                <input type="email" required minlength="5" maxlength="256"/>
+            </div>
+            <div>
+                <label>Senha: </label>
+                <input type="password"/>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label>Nome: </label>
+                <input type="text" placeholder="Ex: Kened" name="nome"/>
+            </div>
+            <div>
+                <label>Telefone: </label>
+                <input type="text" placeholder="Ex: (99) 99999-9999" name="telefone"/>
+            </div>
+            <div>
+                <label>Sexo:</label>
+                <input type="radio" value="Masculino" name="sexo" checked/>
+                <label>Masculino</label>
+                <input type="radio" value="Feminino" name="sexo" />
+                <label>Feminino</label>   
+            </div>
+            <div>
+                <label>Data:</label>
+                <input type="date" name="data_nascimento"/ >
+            </div>
+            <div>
+                <label>Foto de perfil</label>
+                <input type="file" accept="image/*" name="foto"/>
+            </div>
+        </fieldset>
+         <fieldset>
+             <legend>Endereço</legend>
+             <div>
+                <label>Rua:</label>
+                <input type="text" name="endereco_rua"/>
+            </div>
+            <div>
+               <label>Complemento:</label>
+               <input type="text" name="endereco_complemento"/>
+           </div>
+           <div>
+               <label>Número: </label>
+               <input type="number" min="1" max="9999" name="endereco_numero">
+           </div>
+           <div>
+               <label>Cidade:</label>
+               <input type="text" name="endereco_cidade"/>
+           </div>
+           <div>
+               <label>Estado:</label>
+               <select name="endereco_estado">
+                   <option value="RJ">Rio de Janeiro</option>
+                   <option value="SP">São Paulo</option>
+               </select>
+           </div>
+         </fieldset>
+        <fieldset>
+            <legend>Anuncio</legend>
+            <div>
+                <label>Como conheceu o Hello Pizza?</label>
+                <textarea maxlength="256" placeholder="Explique para a gente como nos conheceu ." name="como_conheceu _o_site"></textarea>
+            </div>
+    
+            <div>
+                <label>Deseja receber ofertas por em-mail?</label>
+                <input type="checkbox" name="receber_anuncio" checked required>
+            </div>
+        </fieldset>
+        <input type="submit" value="Enviar"></input>
     </form>
 </body>
 </html>
